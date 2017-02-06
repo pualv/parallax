@@ -44,7 +44,10 @@ window.onload = function () {
         } // calcOffset
 
         function moveIt(offsetx, offsety, classis) {
-            classis.style.transform = 'translateX(' + offsetx + 'px) translateY(' + offsety + 'px)';
+            vendors = ['Webkit', 'Moz', 'ms', 'o', ''];
+            for (var v = 0; v < vendors.length; v += 1){
+                classis.style.transform = vendors[v] + 'translateX(' + offsetx + 'px)' + vendors[v] + ' translateY(' + offsety + 'px)';
+        } //for
         } // moveIt
 
         function calculateShift(mousepos) {
