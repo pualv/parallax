@@ -1,0 +1,38 @@
+.plane_0 {
+	z-index: 0;
+	background-image: url('images/bg1.jpg');
+}
+
+.plane_1 {
+	z-index: 1;
+	background-image: url('images/bg2.png');
+}
+.plane_2 {
+	z-index: 2;
+	background-image: url('images/bg3.png');
+}
+
+.container {
+	width: 1000px;
+	height: 600px;
+	overflow: hidden;
+	border: solid 1px #999999;
+	position: relative;
+}
+
+.plane {
+	width: 1000px;
+	height: 600px;
+	background-repeat: no-repeat;
+
+	/*remove the transition if you don't want the 'float' effect*/
+	-webkit-transition: all 5000ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	   -moz-transition: all 5000ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	     -o-transition: all 5000ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	        transition: all 5000ms cubic-bezier(0.230, 1.000, 0.320, 1.000); /* easeOutQuint */
+}
+
+.plane_0, .plane_1, .plane_2 {
+	position: absolute; 
+}
+
